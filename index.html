@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Calculator</title>
+    <meta name="description"
+        content="Calculate your current attendance percentage and figure out how many classes you need to attend or can miss.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container glass-panel">
+        <header>
+            <h1>Attendance Calculator</h1>
+            <p>Track your classes seamlessly.</p>
+        </header>
+
+        <main>
+            <div class="input-group">
+                <label for="attended">Classes Attended</label>
+                <input type="number" id="attended" placeholder="e.g. 45" min="0">
+            </div>
+
+            <div class="input-group">
+                <label for="total">Total Classes Held</label>
+                <input type="number" id="total" placeholder="e.g. 60" min="1">
+            </div>
+
+            <div class="input-group">
+                <label for="target">Target Attendance (%)</label>
+                <input type="number" id="target" value="75" min="1" max="100">
+            </div>
+
+            <button id="calculate-btn">Calculate</button>
+
+            <div id="results" class="results-section hidden">
+                <div class="result-card current">
+                    <h3>Current Attendance</h3>
+                    <div class="percentage" id="current-percentage">0%</div>
+                </div>
+
+                <div class="result-card action" id="action-recommendation">
+                    <!-- Recommendation text goes here -->
+                </div>
+            </div>
+
+            <button id="about-btn" class="secondary-btn">About Me</button>
+
+            <div id="about-modal" class="modal hidden">
+                <div class="modal-content">
+                    <button class="close-modal" id="close-about">&times;</button>
+                    <h2>About Me</h2>
+                    <p>
+                        Hi, Nabhij Mahajan, A first year B-Tech student who is I am a passinate and dedicated student with a strong interest in web development and programming.<br><br>
+                    I enjoy building interactive and user-friendly applications using technologies like HTML, CSS, and JavaScript.<br><br>
+                    This project reflects my ability to apply logic, creativity, and problem-solving skills to develop practical solutions.<br><br>
+                    I am continuously learning and improving my skills to create efficient and innovative digital experiences.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html
